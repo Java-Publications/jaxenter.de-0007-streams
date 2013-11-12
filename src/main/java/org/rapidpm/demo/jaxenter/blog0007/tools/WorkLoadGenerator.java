@@ -1,4 +1,4 @@
-package org.rapidpm.demo.jaxenter.blog0007.part_01;
+package org.rapidpm.demo.jaxenter.blog0007.tools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +44,5 @@ public class WorkLoadGenerator {
         }
         return result;
     }
-
 
 }
