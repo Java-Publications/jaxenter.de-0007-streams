@@ -7,6 +7,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
+import org.rapidpm.demo.jaxenter.blog0007.tools.DemoValueGenerator;
+import org.rapidpm.demo.jaxenter.blog0007.tools.WorkLoadGenerator;
+
 /**
  * Created by Sven Ruppert on 11.11.13.
  */

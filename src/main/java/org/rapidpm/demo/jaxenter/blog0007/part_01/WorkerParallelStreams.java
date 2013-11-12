@@ -5,6 +5,8 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.rapidpm.demo.jaxenter.blog0007.tools.WorkLoadGenerator;
+
 /**
  * Created by Sven Ruppert on 11.11.13.
  */

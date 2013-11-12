@@ -3,6 +3,9 @@ package org.rapidpm.demo.jaxenter.blog0007.part_01;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.rapidpm.demo.jaxenter.blog0007.tools.DemoValueGenerator;
+import org.rapidpm.demo.jaxenter.blog0007.tools.WorkLoadGenerator;
+
 /**
  * Created by Sven Ruppert on 11.11.13.
  */
@@ -73,5 +76,4 @@ public class WorkerParallelThreads implements Worker {
             result.addAll(generator.generate(values));
         }
     }
-
 }

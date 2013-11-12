@@ -14,7 +14,4 @@ public interface Worker {
     public abstract List<List<Integer>> generateDemoValueMatrix();
 
     public abstract List<List<Double>> generateInterpolatedValues(List<List<Integer>> baseValues);
-
-
-//
 }
