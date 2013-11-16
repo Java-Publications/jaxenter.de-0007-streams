@@ -1,14 +1,14 @@
 package org.rapidpm.demo.jaxenter.blog0007.part_02;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
-import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+
+import org.rapidpm.demo.jaxenter.blog0007.model.Pair;
+import org.rapidpm.demo.jaxenter.blog0007.tools.PairListGenerator;
 
 /**
  * Created by Sven Ruppert on 13.11.13.
@@ -18,7 +18,8 @@ public class Part02 {
 
 
     public static void main(String[] args) {
-        final List<Pair> generateDemoValues = generateDemoValues();
+
+        final List<Pair> generateDemoValues = new PairListGenerator(){}.generateDemoValues();
 
         //Stream from Values
         final Stream<Pair> fromValues = Stream.of(new Pair(), new Pair());
@@ -58,67 +59,5 @@ public class Part02 {
     }
 
 
-
-
-    public static List<Pair> generateDemoValues(){
-        final Random random = new Random();
-        return Stream
-                .generate(() -> {
-                    final Pair p = new Pair();
-                    p.id = random.nextInt(100);
-                    p.value = "Value + " + p.id;
-                    return p;
-                })
-                .limit(100)
-                .collect(Collectors.toList());
-    }
-
-    public static class Pair{
-
-        public int id;
-        public String value;
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(id, value);
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if (this == obj) {
-                return true;
-            }
-            if (obj == null || getClass() != obj.getClass()) {
-                return false;
-            }
-            final Pair other = (Pair) obj;
-            return Objects.equals(this.id, other.id) && Objects.equals(this.value, other.value);
-        }
-
-        @Override
-        public String toString() {
-            final StringBuilder sb = new StringBuilder("Pair{");
-            sb.append("id=").append(id);
-            sb.append(", value='").append(value).append('\'');
-            sb.append('}');
-            return sb.toString();
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        public void setValue(String value) {
-            this.value = value;
-        }
-    }
 
 }
