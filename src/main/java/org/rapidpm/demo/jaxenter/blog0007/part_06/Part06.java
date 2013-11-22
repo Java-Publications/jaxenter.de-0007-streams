@@ -1,14 +1,10 @@
 package org.rapidpm.demo.jaxenter.blog0007.part_06;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import org.rapidpm.demo.jaxenter.blog0007.part_01.Worker;
 
 /**
  * Created by Sven Ruppert on 18.11.13.
@@ -30,7 +26,7 @@ public class Part06 {
                 .collect(Collectors.toList()));
 
         System.out.println(demoValues
-                .stream().substream(4)
+                .stream().skip(4)
                 .collect(Collectors.toList()));
 
         System.out.println(demoValues
